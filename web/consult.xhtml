@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<!--
+        Monochromed by TEMPLATED
+    templated.co @templatedco
+    Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>EzPlanner - Home</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <!--<link href='http://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'/>-->
+        <!--        [if lte IE 8]><script src="js/html5shiv.js"></script><![endif]
+        -->                <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <!--        <script src="js/skel.min.js"></script>
+                <script src="js/skel-panels.min.js"></script>
+                <script src="js/init.js"></script>-->
+        <!--        <noscript>-->
+        <h:outputStylesheet library="css" name="skel-noscript.css"  />
+        <h:outputStylesheet library="css" name="style.css"  />
+        <!--<h:outputStylesheet library="css" name="style-1000px.css"  />-->
+        <h:outputStylesheet library="css" name="style-desktop.css"  />
+        <!--<h:outputStylesheet library="css" name="style-mobile.css"  />-->
+
+        <!--    <link rel="stylesheet" href="resources/css/skel-noscript.css" />
+            <link rel="stylesheet" href="css/style.css" />-->
+        <!--</noscript>-->
+        <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+        <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+    </h:head>
+    <h:body class="homepage">
+
+        <!-- Header -->
+        <div  id="header" style="background-image: url('resources/images/headerBackground3.jpg')">
+            <div class="container">
+
+                <!-- Logo -->
+                <div id="logo">
+                    <h1><a href="#">EzPlanner</a></h1>
+                    <span>It's easy to travel !</span>
+                </div>
+
+                <!-- Nav -->
+                <nav id="nav">
+                    <ul> 
+                        <li><h:link value="Homepage" outcome="index"/></li>
+                        <li><h:link value="My Routes" outcome="userHome"/></li>
+                        <li class="active"><h:link value="Consults" outcome="consult"/></li>
+                        <li><h:link value="About Us" outcome="userHome" /></li>
+                        <li><h:link value="Contacts" outcome="userHome" /></li>
+                        <li><h:link value="Logout" outcome="#{loginBean.logout()}" /></li>
+
+                    </ul>
+                </nav>
+
+            </div>
+        </div>
+        <!-- Header -->
+
+        <!-- Main -->
+        <div id="main">
+            <div class="container">
+                <header>
+                    <h2>What can you consult</h2>
+                </header>
+                <div class="row">
+                    <div class="3u">
+                        <section>
+                            <a href="#" class="image full"><img src="resources/images/trainclock.jpg" alt="" /></a>
+                            <p>Check the schedule of the available public transports</p>
+                            <a href="#" class="button">Schedules</a>
+                        </section>
+                    </div>
+                    <div class="3u">
+                        <section>
+                            <a href="#" class="image full"><img src="resources/images/map.jpg" alt="" /></a>
+                            <p>See, edit and interact with the full map of the desired transport</p>
+                            <a href="#" class="button">Maps</a>
+                        </section>
+                    </div>
+                    <div class="3u">
+                        <section>
+                            <a href="#" class="image full"><img src="resources/images/strike.jpg" alt="" /></a>
+                            <p>Check which transports are available at a certain date and local</p>
+                            <a href="#" class="button">Strikes</a>
+                        </section>
+                    </div>
+                    <div class="3u">
+                        <section>
+                            <a href="#" class="image full"><img src="resources/images/dog.jpg" alt="" /></a>
+                            <p>Coisas completamente aleatórias muitas vezes sem sentido</p>
+                            <a href="#" class="button">Random Stuff</a>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="divider">&nbsp;</div>-->
+        </div>
+        <!-- Main -->
+
+        <!-- Footer -->
+         <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="3u">
+                        <section>
+                          
+                                <ul class="style1">
+                                    <li>
+
+                                        <h:link class="posted" value="CP - Comboios de Portugal" />
+                                        <img src="resources/images/CP.png" width="100" height="100" alt=""/>
+                                        <p>Rede de comboios cenas para ali e para aqui. </p>
+
+                                    </li>
+                                    <li>
+                                        <h:link class="posted" value="ML - Metropolitano de Lisboa" />
+                                        <img src="resources/images/ml4.gif" width="100" height="100" alt=""/>
+                                        <p>Rede de metro e muitas outras coisas fixe e assim. </p>
+
+                                    </li>
+                                    <li>
+                                        <h:link class="posted" value="Carris | Vimeca"/>
+                                        <img src="resources/images/bus.png" width="100" height="100" alt=""/>
+                                        <p>Autocarros e camionetas e bus e cenas com 4 rodas. </p>
+
+                                    </li>
+                                </ul>
+                            
+                        </section>
+                    </div>
+                    <div class="9u">
+                        <section>
+                            <h:outputLabel class="footerTitle" value="#{footerBean.titleToShow}" /> 
+                            <br/>
+                            <h:outputLabel value="#{footerBean.descriptionToShow}" />
+
+
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer -->
+
+        <!-- Copyright -->
+        <div id="copyright">
+            <div class="container">
+                MChapelz
+            </div>
+        </div>
+
+    </h:body>
+</html>
